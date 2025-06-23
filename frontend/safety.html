@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AeroCare - Flight Safety Companion</title>
+  <link href="./styles/output.css" rel="stylesheet" />
+  <style>
+    /* Hide all language sections by default */
+    section[data-lang] {
+      display: none;
+    }
+    /* Show only active language */
+    section[data-lang].active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 p-4">
+  <!-- Navbar -->
+  <nav class="bg-blue-700 text-white p-4 mb-6">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-semibold">AeroCare</h1>
+      <ul class="flex space-x-4">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="checklist.html" class="hover:underline">Checklist</a></li>
+        <li><a href="improvements.html" class="hover:underline">Improvements</a></li>
+        <li><a href="languages.html" class="hover:underline">Languages</a></li>
+        <li>
+          <!-- Language Toggle Dropdown -->
+          <select id="languageSelector" class="text-black p-1 rounded">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="te">తెలుగు</option>
+            <option value="ta">தமிழ்</option>
+            <option value="kn">ಕನ್ನಡ</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Section -->
+  <main class="max-w-4xl mx-auto bg-white p-6 rounded shadow">
+    <h1 class="text-3xl font-bold mb-6 text-center text-blue-800">Flight Safety Tips & Encouragement</h1>
+
+    <!-- English -->
+    <section data-lang="en" class="active text-gray-800">
+      <p class="mb-4">
+        Flying can be stressful, but staying calm is your best tool. Listen carefully to the crew and follow their instructions.
+      </p>
+      <p class="mb-4">
+        When you board, find the nearest emergency exits and count the rows to them. Knowing your way out helps you stay prepared.
+      </p>
+      <p class="mb-4">
+        In an emergency, don’t worry about your belongings. Leave everything behind and move quickly but steadily toward the exits.
+      </p>
+      <p>
+        If there’s smoke, stay low to breathe cleaner air, cover your nose and mouth with a cloth, and follow the signs and crew directions.
+      </p>
+    </section>
+
+    <!-- Hindi -->
+    <section data-lang="hi" class="text-gray-800">
+      <p class="mb-4">
+        उड़ान के दौरान शांत रहना सबसे ज़रूरी है। क्रू के निर्देशों को ध्यान से सुनें।
+      </p>
+      <p class="mb-4">
+        बोर्डिंग के बाद निकटतम आपातकालीन निकास ढूंढ़ें और उनके बीच की दूरी याद रखें।
+      </p>
+      <p class="mb-4">
+        आपातकाल में अपने सामान की चिंता न करें, तुरंत सुरक्षित निकास की ओर बढ़ें।
+      </p>
+      <p>
+        धुआं होने पर ज़मीन के करीब रहें, नाक और मुंह कपड़े से ढकें और क्रू की बात मानें।
+      </p>
+    </section>
+
+    <!-- Telugu -->
+    <section data-lang="te" class="text-gray-800">
+      <p class="mb-4">
+        ప్రయాణంలో శాంతిగా ఉండటం చాలా ముఖ్యం. సిబ్బంది సూచనలను గౌరవించండి.
+      </p>
+      <p class="mb-4">
+        ఎమర్జెన్సీ ఎగ్జిట్ లను కనుగొని, వాటి దగ్గర వరుసలను గుర్తుంచుకోండి.
+      </p>
+      <p class="mb-4">
+        అత్యవసర పరిస్థితుల్లో, మీ సామానుపై ఆందోళన చెందకుండా, వెంటనే ఎగ్జిట్ వైపు ముందుకు నడవండి.
+      </p>
+      <p>
+        పొగ ఉంటే, నేల దగ్గరగా ఉండండి, ముక్కు, నోటిని తుడవండి, సిబ్బంది చెప్పే దిశగా సాగండి.
+      </p>
+    </section>
+
+    <!-- Tamil -->
+    <section data-lang="ta" class="text-gray-800">
+      <p class="mb-4">
+        பயணத்தின் போது அமைதியாக இருங்கள். பணியாளர்களின் அறிவுறுத்தல்களை பின்பற்றுங்கள்.
+      </p>
+      <p class="mb-4">
+        அருகிலுள்ள அவசர வெளியேற்றுக்களை அறிந்து கொண்டு, அதன் இடத்தை எண்ணிக் கொள்ளுங்கள்.
+      </p>
+      <p class="mb-4">
+        அவசரநிலைகளில், உங்களது பொருட்களை கவலைப்பட வேண்டாம். விரைவாக வெளியேறுங்கள்.
+      </p>
+      <p>
+        புகை இருந்தால், தரையில் பின்தங்குங்கள், மூக்கு மற்றும் வாயை மூடி, பணியாளர்களின் வழிகாட்டுதல்களைப் பின்பற்றுங்கள்.
+      </p>
+    </section>
+
+    <!-- Kannada -->
+    <section data-lang="kn" class="text-gray-800">
+      <p class="mb-4">
+        ವಿಮಾನ ಪ್ರಯಾಣ ಸಮಯದಲ್ಲಿ ಶಾಂತವಾಗಿರಿ. ಸಿಬ್ಬಂದಿಯ ಸೂಚನೆಗಳನ್ನು ಅನುಸರಿಸಿ.
+      </p>
+      <p class="mb-4">
+        ಹತ್ತಿದಾಗ, ಹತ್ತಿರದ ತುರ್ತು ನಿರ್ಗಮನದ ಸ್ಥಳಗಳನ್ನು ಕಂಡು ಹಿಡಿದು, ಅವುಗಳ ದೂರವನ್ನು ಗಮನದಲ್ಲಿಡಿ.
+      </p>
+      <p class="mb-4">
+        ತುರ್ತು ಪರಿಸ್ಥಿತಿಯಲ್ಲಿ ನಿಮ್ಮ ವಸ್ತುಗಳ ಬಗ್ಗೆ ಯೋಚಿಸದೆ, ತಕ್ಷಣವೇ ನಿರ್ಗಮನ ದಿಕ್ಕಿಗೆ ಹೋಗಿ.
+      </p>
+      <p>
+        ಧೂಮ ಇಲ್ಲದ ಕಡೆ ಇರಿ, ಮೂಗು ಮತ್ತು ಬಾಯಿಯನ್ನು ಮುಚ್ಚಿ, ಸಿಬ್ಬಂದಿಯ ಮಾರ್ಗದರ್ಶನವನ್ನು ಅನುಸರಿಸಿ.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-800 text-white mt-10 py-4 text-center">
+    <p class="text-sm">
+      © 2025 AeroCare. Committed to safer skies for all travelers.
+    </p>
+  </footer>
+
+  <script>
+    const selector = document.getElementById('languageSelector');
+    const sections = document.querySelectorAll('section[data-lang]');
+
+    function setLanguage(lang) {
+      sections.forEach(section => {
+        section.classList.toggle('active', section.getAttribute('data-lang') === lang);
+      });
+    }
+
+    selector.addEventListener('change', (e) => {
+      setLanguage(e.target.value);
+    });
+
+    // Set initial language to English
+    setLanguage('en');
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
